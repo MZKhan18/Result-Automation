@@ -49,12 +49,11 @@ if st.button("Show Result"):
             # service = Service(ChromeDriverManager().install()
 
             options = webdriver.ChromeOptions()
-            webdriver.ChromeOptions.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
             # options.add_argument("--headless")
-            # options.add_experimental_option("detach", True)
-            # options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-            # chrome_driver_binary = r"C:\Advance Programming\Selenium Drivers\chromedriver.exe"
-            driver = webdriver.Chrome()
+            options.add_experimental_option("detach", True)
+            options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+            chrome_driver_binary = r"C:\Advance Programming\Selenium Drivers\chromedriver.exe"
+            driver = webdriver.Chrome(options=options)
 
             driver.get("https://sstcerp.conicworks.com/examform.php?slug=bef46a916b627ca922729d235571228e")
             driver.implicitly_wait(3)
