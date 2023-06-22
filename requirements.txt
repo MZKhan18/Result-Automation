@@ -1,7 +1,6 @@
 streamlit
 matplotlib
 selenium
-pickle
 webdriver_manager
 PIL
 time
