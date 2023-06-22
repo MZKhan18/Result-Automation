@@ -2,7 +2,3 @@ streamlit
 matplotlib
 selenium
 webdriver_manager
-PIL
-time
-pandas
-os
