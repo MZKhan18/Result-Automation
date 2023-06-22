@@ -45,7 +45,7 @@ student_id_value , student_enroll_value, student_present = fetch_data(number,stu
 if st.button("Show Result"):
     if student_present:
         with st.spinner("loading result....."):
-            os.environ['PATH'] += r"C:\Advance Programming\Selenium Drivers"
+            # os.environ['PATH'] += r"C:\Advance Programming\Selenium Drivers"
 
             options = webdriver.ChromeOptions()
             # options.add_argument("--headless")
