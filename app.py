@@ -46,11 +46,14 @@ if st.button("Show Result"):
     if student_present:
         with st.spinner("loading result....."):
             # os.environ['PATH'] += r"C:\Advance Programming\Selenium Drivers"
+            # service = Service(ChromeDriverManager().install()
 
             options = webdriver.ChromeOptions()
             # options.add_argument("--headless")
             options.add_experimental_option("detach", True)
-            driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+            options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+            chrome_driver_binary = r"C:\Advance Programming\Selenium Drivers\chromedriver.exe"
+            driver = webdriver.Chrome(options=options)
 
             driver.get("https://sstcerp.conicworks.com/examform.php?slug=bef46a916b627ca922729d235571228e")
             driver.implicitly_wait(3)
@@ -83,9 +86,5 @@ if st.button("Show Result"):
 
     else:
         st.error('Student Not Found!', icon="🚨")
-
-
-
-
 
 
