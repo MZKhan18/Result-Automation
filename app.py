@@ -51,7 +51,7 @@ if st.button("Show Result"):
             options = webdriver.ChromeOptions()
             # options.add_argument("--headless")
             options.add_experimental_option("detach", True)
-            options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+            options.binary_location = r"C:\Program Files (x86)\Google\Chrome\Application"
             chrome_driver_binary = r"C:\Advance Programming\Selenium Drivers\chromedriver.exe"
             driver = webdriver.Chrome(options=options)
 
